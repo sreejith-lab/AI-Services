@@ -232,149 +232,79 @@ i {
 .hide {
   display: none;
 }
+/* ------------------------------- */
 
-/* --------------------------------------------- */
-
-.Table1 {
-  padding: 10px 5%;
-  width: 100%;
-  overflow-x: hidden;
-}
-
-.Table1 .container1 {
-  width: 100%;
-  margin: 20px 0px;
-  background-color:#a392f5;
-  border-radius: 12px;
-}
-.image {
+.Table {
+  background-image: url(Assests/sunglasses-map-near-camera-compass_11zon_11zon.webp);
+  z-index: 10;
+  background-position: bottom right;
+  min-height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
-}
-.Table1 .container1 .image img {
-  width: 100%;
-  object-fit: cover;
-}
-
-.imgs-para p {
-  font-size: x-large;
-  padding: 20px;
-background: linear-gradient(to right, #2a0a78, #003bff);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-}
-.imgs-content h3 {
-  text-align: center;
-  background: linear-gradient(to right, #d10b8f, #3a0475);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: "Roboto Slab", serif;
-  font-size: xx-large;
-  padding: 20px;
-}
-@media screen and (max-width:1200px) {
-  .imgs-content h3 {
-    font-size: x-large;
-  }
-  .imgs-para p {
-    font-size: larger;
-  }
-}
-@media screen and (max-width:800px) {
-  .imgs-para p {
-    font-size: large;
-  }
-}
-@media screen and (max-width:500px) {
-  .imgs-content h3 {
-    font-size: larger;
-  }
-  .imgs-para p {
-    font-size: medium;
-    text-align: justify;
-  }
-}
-@media screen and (max-width:400px) {
-  .imgs-content h3 {
-    font-size: large;
-  }
-  .imgs-para p {
-    font-size: small;
-  }
-}
-/* ---------------------Search---------------- */
-
-/* Search Container */
-.search-container {
-  width: 100%;
-  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
 }
 
-/* Search Input */
-#searchInput {
+.login-main {
+  text-align: center;
+}
+
+.login h1,
+h2 {
+  text-align: center;
+  padding: 10px;
+  color:#554b9a;
+  font-family: "Times New Roman", Times, serif;
+}
+.login {
+  max-width: 600px;
+  margin: 50px auto;
+  background: beige;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.login input,
+.login textarea {
   width: 100%;
-  padding: 14px 18px;
-  border-radius: 30px;
-  border: 2px solid #2c1555;
-  outline: none;
-  font-size: 16px;
-  background: #fff;
-  transition: 0.3s ease;
-}
-
-/* Input Focus */
-#searchInput:focus {
-  border-color: #0a0313;
-  box-shadow: 0 0 8px rgba(44, 21, 85, 0.4);
-}
-
-/* Placeholder Styling */
-#searchInput::placeholder {
-  color: #6b6b6b;
-  opacity: 1;
-}
-
-/* WebKit Placeholder */
-#searchInput::-webkit-input-placeholder {
-  color: #6b6b6b;
-}
-
-/* Mozilla Firefox */
-#searchInput:-moz-placeholder {
-  color: #6b6b6b;
-}
-
-/* Microsoft Edge */
-#searchInput:-ms-input-placeholder {
-  color: #6b6b6b;
-}
-
-/* Search Button */
-#searchBtn {
-  padding: 14px 20px;
+  padding: 20px;
+  margin: 10px 0;
   border: none;
-  border-radius: 50%;
-  background: linear-gradient(to right, #2c1555, #0a0313);
-  color: #fff;
+  border-radius: 6px;
+  background: white;
+}
+
+.login button {
+  width: 120px;
+  background: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 18px;
-  transition: 0.3s ease;
+  font-weight: bold;
+  transition: 0.3s;
+  text-align: center;
+  margin-bottom: 5px;
 }
 
-/* Hover Effect */
-#searchBtn:hover {
-  transform: scale(1.08);
-  box-shadow: 0 4px 12px rgba(44, 21, 85, 0.4);
+.f-password {
+  text-decoration: none;
+  color: #554b9a;
+  font-weight: 600;
 }
 
-/* Icon Fix */
-#searchBtn i {
-  font-size: 18px;
+.cta-button {
+  text-decoration: none;
+  color: #554b9a;
 }
 
+.cta-button a {
+  text-decoration: none;
+  color: #554b9a;
+}
 
 /* ------------------ FOOTER PAGE ------------------------ */
 

@@ -234,6 +234,10 @@ i {
 }
 /* ------------------------------------------------------- */
 
+.Structure {
+  overflow-x: hidden;
+}
+
 .Table2 {
   width: 100%;
   display: flex;
@@ -329,6 +333,8 @@ i {
 
 .container2 .sub-contents2 .box {
   width: 100%;
+  border: #a392f5 2px solid;
+  padding: 5px;
 }
 
 .container2 .sub-contents2 .box h3 {
@@ -436,6 +442,7 @@ i {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 10px;
 }
 
 .boxes .div1 {
@@ -462,7 +469,6 @@ i {
 
 .box-content p {
   font-size: larger;
-  text-align: justify;
   font-weight: 600;
   color: #6a9bff;
 }

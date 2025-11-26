@@ -330,7 +330,7 @@ main img {
 /* --------------------------------------------------- */
 
 .Structure {
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   padding: 10px 5%;
 }
 

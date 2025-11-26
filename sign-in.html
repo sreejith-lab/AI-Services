@@ -11,7 +11,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./blog.css" />
+    <link rel="stylesheet" href="./sign-in.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -75,72 +75,48 @@
         <li><a href="./sign-in.html">Sign In</a></li>
       </ul>
     </div>
-    <!-- 🔹 Search Bar -->
- 
-    <div class="Table1">
-         <div class="search-container">
-      <input
-        type="text"
-        id="searchInput"
-        placeholder="Search Robotics-Technology,Agriculture-Technology,AI-Machines-Technology,..."
-      />
-      <button id="searchBtn"><i class="fa-solid fa-search"></i></button>
-    </div>
-      <div id="Robotics-Technology" class="container1" data-aos="fade-right">
-        <div class="imgs-content">
-          <h3>Robotics Technology</h3>
-        </div>
-        <div class="image">
-          <img src="./Assets/r1-t_11zon.webp" alt="" />
-        </div>
-        <div class="imgs-para">
-          <p>
-            Robotic technology is transforming industries by enhancing
-            precision, speed, and safety. From manufacturing lines to healthcare
-            operations, robots automate complex tasks, reduce human effort, and
-            open new possibilities for innovation. As robotics continues to
-            evolve, collaborative robots and autonomous systems are becoming
-            essential for the future of automation.
-          </p>
-        </div>
+    <section class="Table">
+      <div class="login-main" data-aos="fade-up">
+        <form id="form" method="get" action="./error.html" class="login">
+          <div>
+            <h1>LOGIN</h1>
+            <h2>Login to manage your Events</h2>
+          </div>
+          <input
+            id="inputEmail"
+            type="email"
+            placeholder="you@gmail.com"
+            required
+          />
+          <span id="span_email" class="span_email"></span>
+          <input
+            id="inputPassword"
+            type="password"
+            placeholder="Enter your Password"
+            required
+          />
+          <span id="span_password" class="span_password"></span>
+          <div>
+            <a class="f-password" href="./fp.html">Forget Password</a>
+          </div>
+          <div class="flex1" style="display: inline-block; margin: 10px">
+            <button class="cta-button" type="submit">Login</button>
+            <a href="./error.html"
+              ><button class="cta-button" type="reset">Reset</button></a
+            >
+
+            <div class="flex-content">
+              <p>Don't have account? Create Now</p>
+              <a
+                style="color: rgb(6, 107, 6); text-decoration: none"
+                href="./sign-out.html"
+                >Create Account</a
+              >
+            </div>
+          </div>
+        </form>
       </div>
-      <div id="Agriculture-Technology" class="container1" data-aos="fade-left">
-        <div class="imgs-content">
-          <h3>Agriculture Technology</h3>
-        </div>
-        <div class="image">
-          <img src="./Assets/agri-t_11zon.webp" alt="" />
-        </div>
-        <div class="imgs-para">
-          <p>
-            Agriculture technology (AgriTech) is revolutionizing farming with
-            smart irrigation, drone monitoring, soil health sensors, and
-            automated harvesting machines. These innovations help farmers
-            increase productivity, reduce waste, and produce healthier crops.
-            With AI-driven insights, agriculture is moving toward sustainable
-            and efficient farming systems.
-          </p>
-        </div>
-      </div>
-      <div id="AI-Machines-Technology" class="container1" data-aos="fade-right">
-        <div class="imgs-content">
-          <h3>AI Machines Technology</h3>
-        </div>
-        <div class="image">
-          <img src="./Assets/r2-t_11zon.webp" alt="" />
-        </div>
-        <div class="imgs-para">
-          <p>
-            AI-powered machines are reshaping the world with intelligent
-            decision-making, self-learning abilities, and advanced automation.
-            Whether in smart factories, autonomous vehicles, or medical
-            diagnostics, AI machines improve accuracy and efficiency. As
-            technology progresses, AI will continue to enhance human
-            capabilities and redefine industries.
-          </p>
-        </div>
-      </div>
-    </div>
+    </section>
     <footer data-aos="fade-up">
       <div id="vanta-fr"></div>
       <div class="footer-parent">
@@ -208,7 +184,6 @@
   <script src="./Sidebar.js"></script>
   <script src="./footer.js"></script>
   <script src="./scroll.js"></script>
-  <script src="./search.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
@@ -216,6 +191,57 @@
       duration: 1000,
       once: false,
       mirror: true,
+    });
+  </script>
+  <script>
+    //   Forms Page
+
+    const Email = document.getElementById("span_email");
+    const Password1 = document.getElementById("span_password");
+    //   const spError = document.getElementById("span_error");
+    const Form = document.getElementById("form");
+    const InputEmail = document.getElementById("inputEmail");
+    const InputPassword = document.getElementById("inputPassword");
+
+    Form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const emailvalue = InputEmail.value.trim();
+      const password2 = InputPassword.value;
+
+      const validEmail = emailvalue.endsWith("@gmail.com");
+
+      const hasUpper = /[A-Z]/.test(password2);
+      const hasLower = /[a-z]/.test(password2);
+      const hasNumber = /[0-9]/.test(password2);
+      const hasSpecial = /[!@#$%^&*(,.?:{}|<>]/.test(password2);
+      const ValidPassword = hasLower && hasUpper && hasNumber && hasSpecial;
+
+      if (!validEmail) {
+        Email.textContent =
+          "Please Enter Valid Email Id ending with @gmail.com";
+        return;
+      }
+
+      if (validEmail) {
+        Email.textContent = "";
+      }
+
+      if (!ValidPassword) {
+        Password1.textContent =
+          "Enter with Special character , number , uppercase and lowercase (eg:H,@,9,h)";
+        return;
+      }
+
+      if (ValidPassword) {
+        Password1.textContent = "";
+      }
+
+      Email.textContent = "";
+      Password1.textContent = "";
+      Form.reset();
+
+      window.location.href = "./error.html";
     });
   </script>
 </html>

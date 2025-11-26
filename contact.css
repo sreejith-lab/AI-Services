@@ -233,148 +233,126 @@ i {
   display: none;
 }
 
-/* --------------------------------------------- */
 
-.Table1 {
-  padding: 10px 5%;
-  width: 100%;
-  overflow-x: hidden;
-}
 
-.Table1 .container1 {
-  width: 100%;
-  margin: 20px 0px;
-  background-color:#a392f5;
-  border-radius: 12px;
-}
-.image {
-  width: 100%;
-  display: flex;
-}
-.Table1 .container1 .image img {
-  width: 100%;
-  object-fit: cover;
+/* ----------Footer---------- */
+
+
+.contact-section {
+  z-index: 10;
+  /* background-image: url(Assests/flight-concept-with-grapefruit-sunglasses_11zon_11zon.webp); */
+  background-position: bottom;
+  min-height: 100vh;
 }
 
-.imgs-para p {
-  font-size: x-large;
-  padding: 20px;
-background: linear-gradient(to right, #2a0a78, #003bff);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-}
-.imgs-content h3 {
+.head h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
   text-align: center;
-  background: linear-gradient(to right, #d10b8f, #3a0475);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: "Roboto Slab", serif;
-  font-size: xx-large;
-  padding: 20px;
+  color:#554b9a;
 }
-@media screen and (max-width:1200px) {
-  .imgs-content h3 {
-    font-size: x-large;
-  }
-  .imgs-para p {
-    font-size: larger;
-  }
-}
-@media screen and (max-width:800px) {
-  .imgs-para p {
-    font-size: large;
-  }
-}
-@media screen and (max-width:500px) {
-  .imgs-content h3 {
-    font-size: larger;
-  }
-  .imgs-para p {
-    font-size: medium;
-    text-align: justify;
-  }
-}
-@media screen and (max-width:400px) {
-  .imgs-content h3 {
-    font-size: large;
-  }
-  .imgs-para p {
-    font-size: small;
-  }
-}
-/* ---------------------Search---------------- */
 
-/* Search Container */
-.search-container {
+.head p {
+  text-align: center;
+  font-weight: 600;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.contact-card {
+  border-radius: 12px;
+  padding: 30px;
+  border: 4px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 320px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+.contact-card h3 {
+    color: #554b9a;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  background: var(--gradient-2);
+  color: var(--light);
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 50px auto;
+  border: 4px solid rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 50px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form input,
+.contact-form textarea {
   width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  margin: 10px;
+  background: transparent;
+  color: black;
+  font-size: large;
+  font-weight: 700;
+  outline: none;
+}
+
+input::placeholder {
+  color:#a392f5;
+}
+
+textarea::placeholder {
+  color:#a392f5;
+}
+
+.div {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
 }
 
-/* Search Input */
-#searchInput {
-  width: 100%;
-  padding: 14px 18px;
-  border-radius: 30px;
-  border: 2px solid #2c1555;
-  outline: none;
-  font-size: 16px;
-  background: #fff;
-  transition: 0.3s ease;
-}
-
-/* Input Focus */
-#searchInput:focus {
-  border-color: #0a0313;
-  box-shadow: 0 0 8px rgba(44, 21, 85, 0.4);
-}
-
-/* Placeholder Styling */
-#searchInput::placeholder {
-  color: #6b6b6b;
-  opacity: 1;
-}
-
-/* WebKit Placeholder */
-#searchInput::-webkit-input-placeholder {
-  color: #6b6b6b;
-}
-
-/* Mozilla Firefox */
-#searchInput:-moz-placeholder {
-  color: #6b6b6b;
-}
-
-/* Microsoft Edge */
-#searchInput:-ms-input-placeholder {
-  color: #6b6b6b;
-}
-
-/* Search Button */
-#searchBtn {
-  padding: 14px 20px;
-  border: none;
-  border-radius: 50%;
-  background: linear-gradient(to right, #2c1555, #0a0313);
-  color: #fff;
+.contact-form button {
+  background: transparent;
+  color: var(--light);
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  padding: 12px 25px;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 18px;
-  transition: 0.3s ease;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-/* Hover Effect */
-#searchBtn:hover {
-  transform: scale(1.08);
-  box-shadow: 0 4px 12px rgba(44, 21, 85, 0.4);
+.contact-form button:hover {
+  background: red;
+}
+.contact-form button {
+  color:#a392f5;
 }
 
-/* Icon Fix */
-#searchBtn i {
-  font-size: 18px;
+@media screen and (max-width: 680px) {
+  .contact-section {
+    padding: 20px;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: small;
+    width: 95%;
+  }
+  .contact-form {
+    padding: 10px;
+  }
 }
-
 
 /* ------------------ FOOTER PAGE ------------------------ */
 
